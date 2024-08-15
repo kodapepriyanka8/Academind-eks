@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badal's AWS & Kuberenets Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            margin-top: 10px;
+            text-align: center;
+        }
+        nav button, .dropdown button {
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        nav button:hover, .dropdown button:hover {
+            background-color: #d35400;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #e67e22;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .dropdown-content a, .dropdown-content button {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            background-color: #e67e22;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content a:hover, .dropdown-content button:hover {
+            background-color: #d35400;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Badal's AWS & Kuberenets Platform</h1>
+    <nav>
+        <button onclick="location.href='home.html'">Home</button>
+        <button onclick="location.href='contact.html'">Contact</button>
+        <div class="dropdown">
+            <button>Notes</button>
+            <div class="dropdown-content">
+                <button onclick="location.href='upload.html'">Upload Notes</button>
+                <button onclick="location.href='view.html'">View Notes</button>
+                <button onclick="location.href='download.html'">Download Notes</button>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Courses</button>
+            <div class="dropdown-content">
+                <a href="aws-course.html">AWS</a>
+                <a href="kubernetes-course.html">Kubernetes</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<footer>
+    <p>© 2024 www.badaldevops.online. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
