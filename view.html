@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Notes - Badal DevOps Online Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .notes-list {
+            list-style: none;
+            padding: 0;
+        }
+        .notes-list li {
+            margin: 10px 0;
+        }
+        .notes-list a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+        .no-notes {
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Badal DevOps Online Platform</h1>
+</header>
+
+<div class="content">
+    <h2>View Notes</h2>
+    <ul id="notes-list" class="notes-list">
+        <!-- Notes will be dynamically inserted here -->
+    </ul>
+    <p id="no-notes-message" class="no-notes" style="display: none;">No notes available.</p>
+</div>
+
+<footer>
+    <p>© 2024 www.badaldevops.online. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Simulate note data (in a real application, fetch this from a server or local storage)
+    const notes = [
+        { title: "AWS Note 1", link: "#" },
+        { title: "AWS Note 2", link: "#" },
+        { title: "Kubernetes Note 1", link: "#" },
+        { title: "Kubernetes Note 2", link: "#" }
+    ];
+
+    // Get references to HTML elements
+    const notesList = document.getElementById('notes-list');
+    const noNotesMessage = document.getElementById('no-notes-message');
+
+    // Function to display notes
+    function displayNotes() {
+        if (notes.length === 0) {
+            noNotesMessage.style.display = 'block';
+        } else {
+            noNotesMessage.style.display = 'none';
+            notes.forEach(note => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = note.link;
+                link.textContent = note.title;
+                listItem.appendChild(link);
+                notesList.appendChild(listItem);
+            });
+        }
+    }
+
+    // Initialize the page
+    displayNotes();
+</script>
+
+</body>
+</html>
